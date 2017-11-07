@@ -1,0 +1,16 @@
+这个方法应该是先余10得最小一位，需要注意的是开始的时候定义的是long long，这些细节都需要注意；
+另一个是C++语言中直接可以用 int_MIN 和 int MAX 来表示最大最小值。
+class Solution {
+public:
+    int reverse(int x) {
+        long long result = x%10;
+        while (x/10 != 0){
+            x = x/10;
+            result = result * 10 + x % 10;
+        }
+        if (result > INT_MIN && result < INT_MAX)
+            return result;
+        else
+            return 0;
+    }
+};
