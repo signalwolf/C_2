@@ -3,3 +3,5 @@
       法一： 使用dictionary来解决这个问题。
       vector 就是python 里面的list, 而map就是python里面的 dictionary. C 和 python还是有很多的不同的，我不停的忘了加;在句末，但是相信最后还是能搞定的。
       法二： 直接遍历。
+    7. Reverse Interger:
+      这个方法应该是先余10得最小一位，需要注意的是开始的时候定义的是long long，这些细节都需要注意；
