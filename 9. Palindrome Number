@@ -1,0 +1,21 @@
+class Solution {
+public:
+    bool isPalindrome(int x) {
+        if (x < 0) {
+            return false;
+        }
+        int income = x;
+        int result = 0;
+        while (x != 0) {
+            // cout << x <<endl;
+            // cout << result <<endl;
+            result = x % 10 + result * 10;
+            x = x / 10;
+        }
+        if (result == income) {
+            return true;
+        }
+        else
+            return false;
+    }
+};
