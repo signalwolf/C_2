@@ -1,0 +1,28 @@
+这个算法中，我就是使用一个list，首先我们将(,[,{ 以及)}]放在一个list里面，当我们遍历s的时候，我们先看这个值是不是在first part当中，
+  如果是的话我们就将他压入到Queue这个list里面。
+  如果不是的话，我们就要开始讨论了：
+    首先，如果Queue里面什么都没有的话，那么肯定不是一个valid的符号的
+    其次，如果Queue里面最后一位和当前的char不是对应的，这个可以通过在first, second里面的下角标是否相等来判断，那么也不是valid
+    那么最后一个情况就是，两者对应，那么我pop出Queue的最后一位就好。
+  当我们遍历完了整个string之后，我们只需要看看当前的Queue里面是否还有data,如果有的话，那么也不是valid.
+
+class Solution {
+public:
+    bool isValid(string s) {
+        vector <char> Queue;
+        for (int i = 0; i < s.length(); i++){
+            //cout << Queue.size();
+            if (s[i] == '(' || s[i] == '[' || s[i] == '{'  ){
+                Queue.push_back(s[i]);
+            }
+            else{
+                if(Queue.empty()) return false;
+                if(s[i] == ')' && Queue.back() != '(') return false;
+                if(s[i] == '}' && Queue.back() != '{') return false;
+                if(s[i] == ']' && Queue.back() != '[') return false;
+                Queue.pop_back();
+            }
+        }
+        return Queue.empty();
+    }
+};
