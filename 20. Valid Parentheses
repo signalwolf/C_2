@@ -6,6 +6,9 @@
     那么最后一个情况就是，两者对应，那么我pop出Queue的最后一位就好。
   当我们遍历完了整个string之后，我们只需要看看当前的Queue里面是否还有data,如果有的话，那么也不是valid.
 
+在写这个code的过程中我所学到的是：
+  vecotr相当于list,可以通过push_back以及pop_back来压入以及弹出；然后在python中的list[-1]操作则是通过vector.back()来获得
+
 class Solution {
 public:
     bool isValid(string s) {
