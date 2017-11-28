@@ -1,4 +1,6 @@
 Vector 在 C里面到底是什么， vector <int> 代表什么
+  详见C++书第90页，3.3 标准库Vector类型：
+    我的感觉是这个东西有点像python中的list,它可以append之类的操作。
 当要求数据的大小的时候，如何决定使用哪个type， long? long long? int? 各自代表了多少位呢？
 map的使用又有什么需要注意的吗？然后hash.find(nums[i]) != hash.end()代表着什么意思，似乎通过这个就能知道nums[i]是否在hash这个dictionary里面
 C++的输出语句是怎么样的，我现在连使用print进行检测都做不到
